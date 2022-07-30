@@ -14,6 +14,7 @@ Using the API given below create an automated test with the listed acceptance cr
 ## Automation Solution
 
 The given API was automated using JAVA programming language and RestAssured as the API automation library following the coding best practices. The solution is extendable and highly maintainable.
+User friendly HTML results report is generated after test execution.
 
 ## Libraries & Dependency Versions
 
@@ -32,15 +33,15 @@ Following libraries and dependencies are used in this solution
 
 Before executing the test script, you have to install the prerequisite software in your execution machine. You can follow the steps below to setup the execution environment.
 
-1. Download and Install JDK 8 
+1. Download and Install [JDK 8](https://www.oracle.com/java/technologies/downloads/#java8-windows)
 2. Download Install [Eclipse IDE](http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/3/eclipse-rcp-neon-3-win32-x86_64.zip) 
-3. Install the TestNG plugin for Eclipse from the marketplace
+3. Install the **TestNG for Eclipse** plugin from the Eclipse marketplace
 
 Note: You can also use an IDE like IntelliJ IDEA 
 
 ## How to Execute the Test
 
-Please follow the steps given below to execute the test script:
+**Please follow the steps given below to execute the test script:**
 
 1.	Clone this git repository into your local machine
 2.	Open Eclipse IDE
@@ -51,10 +52,11 @@ Please follow the steps given below to execute the test script:
     **Note:** If you see compilation errors, please do a maven force update to retry the dependency download.
     
 4.	Once the project is ready, open src/test/java folder & navigate to com.assurity.test package
-5.	Open APITest.java class (This is where the API test is written)
-6.	Right click -> Run As -> TestNG Test
+5.	Open APITest.java class (This is where the API test is written), Right click -> Run As -> TestNG Test
 
     Test will start to execute and after some time, the test will complete and you will see a message with the test result in the console
+    
+![Assurity_Execution_And_Report_View_Animation2](https://user-images.githubusercontent.com/42607422/181948166-1687a0d4-6d08-4462-a944-35cb5a36446e.gif)
 
 ## View Test Results Report
 
@@ -62,7 +64,7 @@ Please follow the steps given below to execute the test script:
 2.	Inside the folder, you will find a subfolder with the name  **_“ASSURITY_Test_Report_dd_MM_yyyy_HH_mm_ss”_**.
 3.	Open the **_ASSURITY_Test_Execution_Summary.html_** file inside and the report will open in your browser.
 
-## Best Practices Followed
+## :rainbow: Best Practices Followed
 
 1.	Well commented code.
 2.	Maintaining a good packaging structure for better code organization.
@@ -72,3 +74,5 @@ Please follow the steps given below to execute the test script:
 6.	Logs incorporated into the Extent report for further debugging if needed.
 7.	Used a BaseTest class which contains setup, loading configuration and other reusable methods.
 
+
+*Author: Rasitha Ekanayake July 2022*
