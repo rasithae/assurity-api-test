@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
+ * This class is used to load a .properties file in a given location
+ * and read property values using a given key
  * @author RasithaE
  *
  */
@@ -17,7 +19,7 @@ public class PropertyFileReader {
 	public PropertyFileReader(String dataFolder, String dataFile) {
 		this.dataFolder = dataFolder;
 		this.dataFile = dataFile;
-		setPropertyFile();
+		loadPropertyFile();
 	}
 	
 	/**
@@ -48,16 +50,15 @@ public class PropertyFileReader {
 	}
 	
 	/**
-	 * Set given property file 
+	 * Load given property file 
 	 */
-	private void setPropertyFile() {
+	private void loadPropertyFile() {
 		try {
 			properties = new Properties();
 			String dataFilePath =  getDataFolder() + "/" + getDataFile();
 			properties.load(new FileInputStream(dataFilePath));
 		} catch (IOException e) {
 			e.printStackTrace();
-			//Log.error("Error reading property file.");
 		}
 	}
 }
